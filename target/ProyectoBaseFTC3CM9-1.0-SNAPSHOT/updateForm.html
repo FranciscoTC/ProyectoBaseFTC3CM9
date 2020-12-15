@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <style>
+            div{
+                width: 600px;
+                padding: 2px;
+                border-radius: 25px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header" style="text-align: center"><h4>Actualizar Evento</h4></div>
+
+                        <div class="card-body">
+                            <form method="POST" action="EventoServlet?accion=editar">
+                                <div class="form-group row">
+                                    <label for="idEvento" 
+                                           class="col-md-4 col-form-label text-md-right">
+                                        Id
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            id="id" 
+                                            type="text" 
+                                            class="form-control "
+                                            name="id" 
+                                            value="id" 
+                                            required 
+                                            autofocus />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="nombreEvento" 
+                                           class="col-md-4 col-form-label text-md-right">
+                                        Nombre Evento
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            id="nombreEvento" 
+                                            type="text" 
+                                            class="form-control "
+                                            name="nombreEvento" 
+                                            value="evento" 
+                                            required 
+                                            autofocus />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="sede" 
+                                           class="col-md-4 col-form-label text-md-right">
+                                        Sede Evento
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            id="sede" 
+                                            type="text" 
+                                            class="form-control "
+                                            name="sede" 
+                                            value="sede" 
+                                            required 
+                                            autofocus />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="fechaInicio" 
+                                            class="col-md-4 col-form-label text-md-right">
+                                                Fecha Inicio
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            class="form-control" 
+                                            type="date"  
+                                            id="fechaInicio"
+                                            name="fechaInicio"
+                                            >
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label for="fechaTermino" 
+                                            class="col-md-4 col-form-label text-md-right">
+                                                Fecha Termino
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            class="form-control" 
+                                            type="date" 
+                                            id="fechaTermino"
+                                            name="fechaTermino">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            Registrar                               
+                                        </button>
+                                        <button class="btn btn-primary">
+                                            <a href="http://localhost:8090/ProyectoBaseFTC3CM9/EventoServlet?accion=listaDeEventos" style="color: white">Cancelar</a>                                
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
